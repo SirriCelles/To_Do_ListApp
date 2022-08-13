@@ -7,8 +7,53 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <div class="container">                                 
-      <h1></h1>
+    <div class="container">
+      <div class="row p5" id="top-header">
+        <p>Today's To Do</p>
+        <img class="icon" id="loopSvg" alt="loop_img" />
+      </div>
+      <div class="lists">
+        <ul class="items addItem-list">
+          <li>
+            <form id="addListItem">
+              <input
+                type="text"
+                placeholder="Add to your list"
+                name="addListItem"
+                class="input-class"
+              />
+              <input
+                type="submit"
+                id="new-item-submit"
+                class="icon icon-submit"
+                value=" "
+                title="click this or press enter to submit"
+              />
+            </form>
+          </li>
+        </ul>
+
+        <ul class="items" id="item-list">
+          <li class="clearfix todo">
+            <button>
+              <img  inline src="src/assets/check.svg" alt="Check_box" />
+            </button>
+            <button>
+              <img id="squareSvg" alt="Check_box" />
+            </button>
+            <div>
+              <label for="">Test1 blah blah</label>
+              <textarea name="" id="" cols="30" rows="10">
+              Test1 blah blah
+            </textarea
+              >
+            </div>
+            <img class="icon" id="moreSvg" alt="more_icon" />
+            <img class="icon" id="trashSvg" alt="delete_icon" />
+          </li>
+        </ul>
+      </div>
+      <button class="footer">Clear all Completed</button>
     </div>
   </body>
 </html>

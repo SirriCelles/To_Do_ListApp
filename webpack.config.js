@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 
 module.exports = {
     mode: 'development',
@@ -48,14 +49,18 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
             },
+
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Webpack App',
+            title: 'To Do List App',
             filename: 'index.html',
             template: 'src/index.html'
         }),
+        new HtmlWebpackInlineSVGPlugin({
+            runPreEmit: true,
+          }),
         new BundleAnalyzerPlugin(),
     ]
 }
