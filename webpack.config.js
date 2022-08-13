@@ -54,7 +54,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Webpack App',
             filename: 'index.html',
-            template: 'src/template.html'
+            template: 'src/index.html'
         }),
         new BundleAnalyzerPlugin(),
     ]
