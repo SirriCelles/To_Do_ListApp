@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="row p5" id="top-header">
+      <div class="row" id="top-header">
         <p>Today's To Do</p>
         <img class="icon" id="loopSvg" alt="loop_img" />
       </div>
@@ -35,21 +35,21 @@
 
         <ul class="items" id="item-list">
           <li class="clearfix todo">
-            <button>
-              <img  inline src="src/assets/check.svg" alt="Check_box" />
+            <!-- <button class="toggle" title="Check" alt="Check" >
+              <img inline class="ion-check" src="src/assets/check.svg" alt="check_icon" />
+            </button> -->
+            <button class="toggle" title="Check" alt="Check">
+              <img inline class="ion-check" src="src/assets/crop_square.svg" alt="check_box" />
             </button>
-            <button>
-              <img id="squareSvg" alt="Check_box" />
-            </button>
-            <div>
-              <label for="">Test1 blah blah</label>
-              <textarea name="" id="" cols="30" rows="10">
+            <div class="display">
+              <label for="" class="label">Test1 blah blah</label>
+              <!-- <textarea  class="edit-text input-class" name="" id="" cols="30" rows="10">
               Test1 blah blah
             </textarea
-              >
+              > -->
             </div>
-            <img class="icon" id="moreSvg" alt="more_icon" />
-            <img class="icon" id="trashSvg" alt="delete_icon" />
+            <!-- <img inline class="more-icon" src="src/assets/more_vert.svg" alt="more_icon""/> -->
+            <img class="trash-icon" inline src="src/assets/trash-o.svg" alt="delete_icon" />
           </li>
         </ul>
       </div>

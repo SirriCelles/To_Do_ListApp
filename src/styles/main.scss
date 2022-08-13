@@ -39,7 +39,7 @@ body {
 }
 
 #top-header {
-  padding: 0 92px 0 46px;
+  padding: 0 37px 0 2rem;
   height: 50px;
   background: #fff;
   border-bottom: 1px solid rgba(0,0,0,0.08);
@@ -101,12 +101,17 @@ body {
   #new-item-submit {
     appearance: none;
     border: none;
-     background-color: transparent;
+     background-color: #333333;
+     width: 1.9rem;
+     font-size: 1.8rem;
     z-index: 0;
-    background-image: url('../assets/transit_enterexit.svg');
+    -webkit-mask-image: url('../assets/transit_enterexit.svg');
+    mask-image: url('../assets/transit_enterexit.svg');
+    //background-image: url('../assets/transit_enterexit.svg');
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+  
   }
 }
 
@@ -125,12 +130,10 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-    
+
     background-color: #fff;
     padding: 0px 3em;
-    font-size: 1rem;
     border-bottom: 1px solid rgba(0,0,0,0.08);
-    font-weight: 300;
     -webkit-transition: background-color 200ms linear;
     transition: background-color 200ms linear;
     box-sizing: content-box;
@@ -140,8 +143,81 @@ body {
     backface-visibility: hidden;
     -webkit-perspective: 1000;
     perspective: 1000;
+
+    .toggle {
+      background-color: aquamarine;
+      appearance: none;
+      //background-color: transparent;
+      outline: none;
+      padding: 0;
+      border: 2px solid #c1c1c3;
+      cursor: pointer;
+      //float: left;
+      color: transparent;
+      height: 16px;
+      width: 16px;
+      border-radius: 2px;
+      margin: 17px 0px;
+      margin-left: -2em;
+      box-sizing: border-box;
+
+      .ion-check{
+        fill: #c1c1c3;
+        margin: -5px;
+        box-sizing: content-box;
+        display: block;
+      }
+    }
   
   }
+}
+
+.display {
+  background-color: bisque;
+  flex: 0 0 97%;
+  text-align: left;
+  .label {
+    width: 100%;
+    padding: 15px 0px;
+    line-height: 20px;
+    word-wrap: break-word;
+    margin-left: 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  .edit-text {
+    height: 20px;
+    overflow: auto;
+    width: 100%;
+    padding: 15px 0px;
+    line-height: 20px;
+    word-wrap: break-word;
+  }
+}
+
+.more-icon {
+  flex: 0 0 9%;
+  opacity: .2;
+    float: right;
+    margin-right: -3em;
+    padding: 0 0.5rem;
+    line-height: 0;
+    cursor: move;
+}
+
+.trash-icon {
+  background-color: blueviolet;
+  flex: 0 0 7%;
+  opacity: 0.5;
+    padding: 0 0.25rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    top: 0px;
+    color: #333;
+    right: 0px;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 .footer {
@@ -151,7 +227,7 @@ body {
   outline: none;
   border: none;
   background-color: transparent;
-  margin: 1rem auto;
+  margin: 2rem auto;
   display: block;
 }
 
